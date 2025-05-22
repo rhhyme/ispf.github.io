@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Landing Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom font for better aesthetics */
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <nav class="fixed top-0 w-full z-10 bg-white shadow">
+      <div
+        class="max-w-7xl mx-auto py-4 px-2 flex justify-between items-center"
+      >
+        <div class="text-xl font-bold">ispf</div>
+        <ul class="flex space-x-6">
+          <li>
+            <a href="#" class="hover:text-gray-300 px-2">Best Practices</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-gray-300 px-2">Misconceptions</a>
+          </li>
+          <li><a href="#" class="hover:text-gray-300 px-2">Takeaways</a></li>
+          <li><a href="#" class="hover:text-gray-300 px-2">About Us</a></li>
+        </ul>
+        <div
+          id="languageSwitcher"
+          class="w-12 h-12 bg-white text-black flex items-center justify-center rounded-lg cursor-pointer transition-colors duration-300"
+        >
+          <span id="languageText" class="font-semibold">ID</span>
+        </div>
+      </div>
+    </nav>
+
+    <section class="text-center pt-48">
+      <h1
+        class="text-8xl font-bold max-w-7xl mx-auto text-left md:text-left mb-16"
+      >
+        Learning to Appreciate the Mind Not Forcing It to Conform
+      </h1>
+      <div class="max-w-7xl mb-28 mx-auto flex justify-start gap-16">
+        <p class="text-sm text-gray-600 max-w-sm relative text-left">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam.
+        </p>
+
+        <a
+          href="#"
+          class="inline-block bg-black text-white px-6 py-4 rounded-full hover:bg-white hover:text-black transition"
+          >Learn More</a
+        >
+      </div>
+
+      <div class="max-w-7xl mx-auto text-right text-sm text-gray-600 mt-12">
+        <p class="text-sm font-semibold">In collaboration of</p>
+        <p class="hover:tinext-blue-400">British Council</p>
+        <p class="hover:text-blue-400">Anglia Ruskin University</p>
+        <p class="hover:text-blue-400">Sampoerna University</p>
+        <p class="hover:text-blue-400">The Open University</p>
+      </div>
+
+      <!-- YouTube video embed with autoplay -->
+      <div class="mt-10 w-full max-w-7xl mx-auto aspect-video">
+        <iframe
+          class="w-full h-full"
+          src="https://www.youtube.com/embed/re_-vMGSiJI?autoplay=1&mute=1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <section class="text-left pt-48">
+      <div class="max-w-7xl mb-12 flex justify-between mx-auto gap-x-56">
+        <p class="text-3xl text-gray-600 relative text-left">
+          What is Neurodiversity?
+        </p>
+        <p class="text-2xl text-gray-600 relative text-left">
+          <span class="font-semibold">Neurodiversity</span>
+          is the range of differences in individual brain function and
+          behavioral traits, regarded as part of
+          <span class="font-semibold">normal variation</span> in the human
+          population.
+        </p>
+      </div>
+      <a
+        href="#"
+        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mx-auto"
+      >
+        <p class="font-normal text-gray-700 dark:text-gray-400">
+          Survey Result
+        </p>
+        <h5
+          class="mb-12 mt-12 text-8xl font-bold tracking-tight text-gray-900 dark:text-white"
+        >
+          51%
+        </h5>
+        <p class="font-normal text-gray-700 dark:text-gray-400">
+          We conducted an online survey in September 2024 to see if people in
+          Indonesia know about Neurodiversity. 51% of our respondents said that
+          they never heard of it.
+        </p>
+      </a>
+      <div class="max-w-7xl mb-12 flex justify-between mx-auto gap-x-56">
+        <p class="text-3xl text-gray-600 relative text-left">
+          What is Neurodiversity?
+        </p>
+        <p class="text-2xl text-gray-600 relative text-left">
+          <span class="font-semibold">Neurodiversity</span>
+          is the range of differences in individual brain function and
+          behavioral traits, regarded as part of
+          <span class="font-semibold">normal variation</span> in the human
+          population.
+        </p>
+      </div>
+    </section>
+
+    <script>
+      // Get references to the language switcher elements
+      const languageSwitcher = document.getElementById("languageSwitcher");
+      const languageText = document.getElementById("languageText");
+
+      // Initial language state (true for English, false for Indonesian)
+      let isEnglish = false; // Start with Indonesian (ID)
+
+      // Add a click event listener to the language switcher square
+      languageSwitcher.addEventListener("click", () => {
+        // Toggle the language state
+        isEnglish = !isEnglish;
+
+        // Update the text content and background color based on the language state
+        if (isEnglish) {
+          languageText.textContent = "EN";
+          languageSwitcher.classList.remove("bg-white");
+          languageSwitcher.classList.remove("text-black");
+          languageSwitcher.classList.add("bg-black"); // Change color for English
+          languageSwitcher.classList.add("text-white");
+        } else {
+          languageText.textContent = "ID";
+          languageSwitcher.classList.remove("bg-black");
+          languageSwitcher.classList.remove("text-white");
+          languageSwitcher.classList.add("bg-white"); // Revert to original color for Indonesian
+          languageSwitcher.classList.add("text-black");
+        }
+      });
+    </script>
+  </body>
+</html>
