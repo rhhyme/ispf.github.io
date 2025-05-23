@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,150 +10,831 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* Custom font for better aesthetics */
+      /* Custom font family for the body */
       body {
         font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      /* Styles for showing myth and revealing reality on click */
+      .myth-reality {
+        display: none; /* Reality is hidden by default */
+      }
+      .myth-card.active .myth-statement {
+        display: none; /* Hide the myth statement when the card is active (clicked) */
+      }
+      .myth-card.active .myth-reality {
+        display: block; /* Show the reality when the card is active (clicked) */
       }
     </style>
   </head>
   <body class="bg-gray-50 text-gray-900">
-    <nav class="fixed top-0 w-full z-10 bg-white shadow">
+    <nav class="fixed top-0 w-full z-10 bg-white shadow-md rounded-b-lg">
       <div
-        class="max-w-7xl mx-auto py-4 px-2 flex justify-between items-center"
+        class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center"
       >
-        <div class="text-xl font-bold">ispf</div>
-        <ul class="flex space-x-6">
-          <li>
-            <a href="#" class="hover:text-gray-300 px-2">Best Practices</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-gray-300 px-2">Misconceptions</a>
-          </li>
-          <li><a href="#" class="hover:text-gray-300 px-2">Takeaways</a></li>
-          <li><a href="#" class="hover:text-gray-300 px-2">About Us</a></li>
-        </ul>
         <div
-          id="languageSwitcher"
-          class="w-12 h-12 bg-white text-black flex items-center justify-center rounded-lg cursor-pointer transition-colors duration-300"
+          class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center"
         >
-          <span id="languageText" class="font-semibold">ID</span>
+          <a
+            href="index.html"
+            target="_blank"
+            class="block text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors duration-300 rounded-md p-2"
+          >
+            ispf
+          </a>
         </div>
+        <ul class="hidden md:flex space-x-8">
+          <li>
+            <a
+              href="#best-practices"
+              class="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              >Best Practices</a
+            >
+          </li>
+          <li>
+            <a
+              href="#misconceptions"
+              class="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              >Misconceptions</a
+            >
+          </li>
+          <li>
+            <a
+              href="#takeaways"
+              class="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              >Takeaways</a
+            >
+          </li>
+          <li>
+            <a
+              href="aboutus.html"
+              target="_blank"
+              class="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              >About Us</a
+            >
+          </li>
+        </ul>
+
+        <div class="flex items-center space-x-4">
+          <button
+            id="mobile-menu-button"
+            class="md:hidden p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          >
+            <svg
+              class="w-6 h-6 text-gray-700"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+          <div
+            id="languageSwitcher"
+            class="w-12 h-12 bg-white text-black flex items-center justify-center rounded-full cursor-pointer transition-colors duration-300 shadow-sm hover:shadow-md"
+          >
+            <span id="languageText" class="font-semibold">ID</span>
+          </div>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white shadow-lg rounded-b-lg py-2"
+      >
+        <ul class="flex flex-col items-center space-y-2 px-4">
+          <li>
+            <a
+              href="#"
+              class="block w-full text-center py-2 px-4 text-gray-700 hover:bg-gray-100 rounded-md"
+              >Best Practices</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block w-full text-center py-2 px-4 text-gray-700 hover:bg-gray-100 rounded-md"
+              >Misconceptions</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block w-full text-center py-2 px-4 text-gray-700 hover:bg-gray-100 rounded-md"
+              >Takeaways</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              target="_blank"
+              class="block w-full text-center py-2 px-4 text-gray-700 hover:bg-gray-100 rounded-md"
+              >About Us</a
+            >
+          </li>
+        </ul>
       </div>
     </nav>
 
-    <section class="text-center pt-48">
-      <h1
-        class="text-8xl font-bold max-w-7xl mx-auto text-left md:text-left mb-16"
+    <section class="md:py-32 lg:py-48 left-52">
+      <div
+        class="container mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left"
       >
-        Learning to Appreciate the Mind Not Forcing It to Conform
-      </h1>
-      <div class="max-w-7xl mb-28 mx-auto flex justify-start gap-16">
-        <p class="text-sm text-gray-600 max-w-sm relative text-left">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam.
-        </p>
-
-        <a
-          href="#"
-          class="inline-block bg-black text-white px-6 py-4 rounded-full hover:bg-white hover:text-black transition"
-          >Learn More</a
+        <h1
+          class="text-4xl md:text-4xl lg:text-6xl font-bold max-w-4xl mx-auto mb-8 md:mb-12 leading-tight"
         >
-      </div>
+          Learning to Appreciate the Mind Not Forcing It to Conform
+        </h1>
+        <div
+          class="max-w-4xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-start gap-6 md:gap-12 mb-8 md:mb-56"
+        >
+          <p class="text-base md:text-lg text-gray-600 max-w-md text-left">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
+          </p>
+          <a
+            href="aboutus.html"
+            target="_blank"
+            class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-300 hover:shadow-lg transition-all duration-300 text-lg font-medium"
+            >Learn More</a
+          >
+        </div>
 
-      <div class="max-w-7xl mx-auto text-right text-sm text-gray-600 mt-12">
-        <p class="text-sm font-semibold">In collaboration of</p>
-        <p class="hover:tinext-blue-400">British Council</p>
-        <p class="hover:text-blue-400">Anglia Ruskin University</p>
-        <p class="hover:text-blue-400">Sampoerna University</p>
-        <p class="hover:text-blue-400">The Open University</p>
-      </div>
+        <div
+          class="max-w-4xl mx-auto text-right md:text-right text-sm text-gray-600 mt-8 md:mt-12"
+        >
+          <p class="font-semibold mb-1">In collaboration of</p>
+          <p class="hover:text-blue-600 transition-colors duration-200">
+            British Council
+          </p>
+          <p class="hover:text-blue-600 transition-colors duration-200">
+            Anglia Ruskin University
+          </p>
+          <p class="hover:text-blue-600 transition-colors duration-200">
+            Sampoerna University
+          </p>
+          <p class="hover:text-blue-600 transition-colors duration-200">
+            The Open University
+          </p>
+        </div>
 
-      <!-- YouTube video embed with autoplay -->
-      <div class="mt-10 w-full max-w-7xl mx-auto aspect-video">
-        <iframe
-          class="w-full h-full"
-          src="https://www.youtube.com/embed/re_-vMGSiJI?autoplay=1&mute=1"
-          title="YouTube video player"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen
-        ></iframe>
+        <div class="mt-12 md:mt-16 w-full max-w-4xl mx-auto aspect-video">
+          <iframe
+            class="w-full h-full rounded-xl shadow-lg"
+            src="https://www.youtube.com/embed/re_-vMGSiJI?autoplay=1&mute=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
     </section>
 
-    <section class="text-left pt-48">
-      <div class="max-w-7xl mb-12 flex justify-between mx-auto gap-x-56">
-        <p class="text-3xl text-gray-600 relative text-left">
-          What is Neurodiversity?
-        </p>
-        <p class="text-2xl text-gray-600 relative text-left">
-          <span class="font-semibold">Neurodiversity</span>
-          is the range of differences in individual brain function and
-          behavioral traits, regarded as part of
-          <span class="font-semibold">normal variation</span> in the human
-          population.
-        </p>
-      </div>
-      <a
-        href="#"
-        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mx-auto"
-      >
-        <p class="font-normal text-gray-700 dark:text-gray-400">
-          Survey Result
-        </p>
-        <h5
-          class="mb-12 mt-12 text-8xl font-bold tracking-tight text-gray-900 dark:text-white"
+    <section class="py-24 md:py-32 bg-gray-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-left">
+        <div
+          class="max-w-5xl mx-auto mb-12 flex flex-col md:flex-row justify-between items-start md:items-start gap-8 md:gap-x-16 lg:gap-x-24"
         >
-          51%
-        </h5>
-        <p class="font-normal text-gray-700 dark:text-gray-400">
-          We conducted an online survey in September 2024 to see if people in
-          Indonesia know about Neurodiversity. 51% of our respondents said that
-          they never heard of it.
-        </p>
-      </a>
-      <div class="max-w-7xl mb-12 flex justify-between mx-auto gap-x-56">
-        <p class="text-3xl text-gray-600 relative text-left">
-          What is Neurodiversity?
-        </p>
-        <p class="text-2xl text-gray-600 relative text-left">
-          <span class="font-semibold">Neurodiversity</span>
-          is the range of differences in individual brain function and
-          behavioral traits, regarded as part of
-          <span class="font-semibold">normal variation</span> in the human
-          population.
-        </p>
+          <h2 class="text-3xl md:text-4xl text-gray-800 font-bold max-w-sm">
+            What is Neurodiversity?
+          </h2>
+          <p class="text-lg md:text-2xl text-gray-600 max-w-2xl">
+            <span class="font-semibold">Neurodiversity</span>
+            is the range of differences in individual brain function and
+            behavioral traits, regarded as part of
+            <span class="font-semibold">normal variation</span> in the human
+            population.
+          </p>
+        </div>
+        <div
+          class="max-w-5xl mx-auto mb-24 flex flex-col lg:flex-row justify-end items-center lg:items-start gap-12"
+        >
+          <div class="hidden lg:block w-full lg:w-1/2"></div>
+          <a
+            href="#"
+            class="block w-full max-w-sm p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 transition-all duration-200"
+          >
+            <p
+              class="font-normal text-gray-700 dark:text-gray-400 mb-4 text-base"
+            >
+              Survey Result
+            </p>
+            <h5
+              class="mb-8 text-7xl md:text-8xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              51%
+            </h5>
+            <p class="font-normal text-gray-700 dark:text-gray-400 text-sm">
+              We conducted an online survey in September 2024 to see if people
+              in Indonesia know about Neurodiversity. 51% of our respondents
+              said that they never heard of it.
+            </p>
+          </a>
+        </div>
+
+        <div class="max-w-5xl mx-auto mb-16">
+          <h2
+            class="text-3xl md:text-4xl text-gray-800 font-bold text-left mb-8"
+          >
+            Some Typology
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div
+              class="block p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 transition-all duration-200"
+            >
+              <h3
+                class="mb-6 mt-2 text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                ASD
+              </h3>
+              <p
+                class="font-normal text-gray-700 dark:text-gray-400 text-sm leading-relaxed"
+              >
+                Autism Spectrum Disorder (ASD) is a neuro-developmental
+                condition that affects how people interact with others,
+                communicate, learn, and behave. It's called a "spectrum"
+                disorder because it affects individuals differently and to
+                varying degrees. The term encompasses a wide range of
+                characteristics and levels of support needed. While the specific
+                presentation of ASD varies greatly from person to person, there
+                are some symptoms, particularly in young children, that people
+                might more easily recognize such as social
+                communication/interaction differences and repetitive or
+                restricted behaviors or interests. However, a diagnosis of ASD
+                requires a comprehensive evaluation by qualified professionals.
+              </p>
+            </div>
+            <div
+              class="block p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 transition-all duration-200"
+            >
+              <h3
+                class="mb-6 mt-2 text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                ADHD
+              </h3>
+              <p
+                class="font-normal text-gray-700 dark:text-gray-400 text-sm leading-relaxed"
+              >
+                Attention-Deficit/Hyperactivity Disorder (ADHD) is a
+                neuro-developmental condition characterized by persistent
+                patterns of inattention and/or hyperactivity-impulsivity that
+                interfere with functioning or development. These patterns are
+                more frequent and severe than is typical for individuals at a
+                comparable level of development. It's important to remember that
+                everyone occasionally experiences difficulties with attention,
+                hyperactivity, or impulsivity. However, in ADHD, these symptoms
+                are chronic, pervasive (occurring in multiple settings like
+                home, school, or work), and significantly impact daily life.
+                Again, a comprehensive evaluation by a qualified healthcare
+                professional is necessary to diagnose ADHD.
+              </p>
+            </div>
+            <div
+              class="block p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 transition-all duration-200"
+            >
+              <h3
+                class="mb-6 mt-2 text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                Dyslexia
+              </h3>
+              <p
+                class="font-normal text-gray-700 dark:text-gray-400 text-sm leading-relaxed"
+              >
+                Dyslexia is a specific learning disability that is
+                neuro-biological in origin. It is characterized by difficulties
+                with accurate and/or fluent word recognition and by poor
+                spelling and decoding abilities. These difficulties typically
+                result from a deficit in the phonological component of language
+                that is often unexpected in relation to other cognitive
+                abilities and the provision of effective classroom instruction.
+                Essentially, dyslexia is a language-based learning disability
+                that primarily affects reading. It's not about intelligence;
+                people with dyslexia have a range of intellectual abilities. The
+                core difficulty lies in processing the sounds of language
+                (phonemes) and how they relate to written letters (graphemes).
+              </p>
+            </div>
+            <div
+              class="block p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 transition-all duration-200"
+            >
+              <h3
+                class="mb-6 mt-2 text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                Tourette Syndrome
+              </h3>
+              <p
+                class="font-normal text-gray-700 dark:text-gray-400 text-sm leading-relaxed"
+              >
+                Tourette Syndrome is a neuro-developmental disorder
+                characterized by tics, which are sudden, repetitive,
+                non-rhythmic movements or vocalizations. These tics are
+                involuntary, meaning the person cannot easily control them. To
+                be diagnosed with Tourette Syndrome, a person must have both
+                multiple motor tics and at least one vocal tic at some point,
+                although not necessarily at the same time. Tourette Syndrome is
+                a complex condition, and its impact varies greatly from person
+                to person. With understanding, support, and appropriate
+                management strategies, individuals with TS can lead full and
+                productive lives.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="max-w-5xl mx-auto mb-24 md:mb-32">
+          <p
+            class="text-sm md:text-base text-gray-600 text-left leading-relaxed"
+          >
+            There are more conditions that fall under the umbrella of
+            Neurodiversity such as Dyspraxia, Dysgraphia, Dyscalculia,
+            Synesthesia, and other conditions. We only take four most common
+            examples that people might associate those to Neurodiversity. It is
+            important to note that Neurodiversity is not the same as
+            Intellectual Disability. Neurodivergent Individual may very well be
+            an intelligent person who has regular or high Intelligent Quotient
+            (IQ).
+          </p>
+        </div>
       </div>
     </section>
+
+    <section
+      id="misconceptions"
+      class="py-24 md:py-32 bg-gray-100 scroll-mt-24"
+    >
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-left">
+        <div
+          class="max-w-5xl mx-auto mb-12 flex flex-col md:flex-row justify-between items-start md:items-start gap-8"
+        >
+          <h2 class="text-3xl md:text-4xl text-gray-800 font-bold max-w-sm">
+            Misconception
+          </h2>
+          <p class="text-lg md:text-xl text-gray-600 max-w-2xl">
+            <span class="font-semibold">
+              Why positive representation of Neurodiversity in media and our
+              culture is important?
+            </span>
+            because there are many mythologies out of our own ignorance.
+          </p>
+        </div>
+
+        <div
+          class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24 md:mb-32"
+        >
+          <div
+            class="myth-card block p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 cursor-pointer transition-all duration-200"
+          >
+            <h5
+              class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Myth 1
+            </h5>
+            <div
+              class="myth-statement text-gray-700 dark:text-gray-400 text-base"
+            >
+              <p>“Neurodivergence is a disease that needs to be cured.”</p>
+            </div>
+            <div class="myth-reality text-gray-700 dark:text-gray-400 text-sm">
+              <p class="mt-2">
+                Truth: Neurodivergence is a natural variation in brain wiring,
+                not an illness. While support may be needed, the goal isn’t
+                "fixing" but accommodating differences.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="myth-card block p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 cursor-pointer transition-all duration-200"
+          >
+            <h5
+              class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Myth 2
+            </h5>
+            <div
+              class="myth-statement text-gray-700 dark:text-gray-400 text-base"
+            >
+              <p>
+                “All autistic people are geniuses or intellectually disabled.”
+              </p>
+            </div>
+            <div class="myth-reality text-gray-700 dark:text-gray-400 text-sm">
+              <p class="mt-2">
+                Truth: Autism (and neurodivergence generally) is a spectrum.
+                Skills vary widely—some may excel in math or art, while others
+                need support with daily tasks.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="myth-card block p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 cursor-pointer transition-all duration-200"
+          >
+            <h5
+              class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Myth 3
+            </h5>
+            <div
+              class="myth-statement text-gray-700 dark:text-gray-400 text-base"
+            >
+              <p>“People with ADHD are just lazy or undisciplined.”</p>
+            </div>
+            <div class="myth-reality text-gray-700 dark:text-gray-400 text-sm">
+              <p class="mt-2">
+                Truth: ADHD involves executive dysfunction (e.g., focus, impulse
+                control). With structure and tools, many thrive in dynamic
+                careers (e.g., entrepreneurs, artists).
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="myth-card block p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 cursor-pointer transition-all duration-200"
+          >
+            <h5
+              class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Myth 4
+            </h5>
+            <div
+              class="myth-statement text-gray-700 dark:text-gray-400 text-base"
+            >
+              <p>“Dyslexia means low intelligence.”</p>
+            </div>
+            <div class="myth-reality text-gray-700 dark:text-gray-400 text-sm">
+              <p class="mt-2">
+                Truth: Dyslexia affects reading fluency, not IQ. Many dyslexics
+                are gifted in problem-solving, creativity, or oral communication
+                (e.g., Steven Spielberg, Whoopi Goldberg).
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="myth-card block p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 cursor-pointer transition-all duration-200"
+          >
+            <h5
+              class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Myth 5
+            </h5>
+            <div
+              class="myth-statement text-gray-700 dark:text-gray-400 text-base"
+            >
+              <p>“Neurodivergent people lack empathy.”</p>
+            </div>
+            <div class="myth-reality text-gray-700 dark:text-gray-400 text-sm">
+              <p class="mt-2">
+                Truth:They may express empathy differently (e.g., autistic
+                people might struggle with social cues but feel deep
+                compassion).
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="myth-card block p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 cursor-pointer transition-all duration-200"
+          >
+            <h5
+              class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Myth 6
+            </h5>
+            <div
+              class="myth-statement text-gray-700 dark:text-gray-400 text-base"
+            >
+              <p>“Only boys are neurodivergent.”</p>
+            </div>
+            <div class="myth-reality text-gray-700 dark:text-gray-400 text-sm">
+              <p class="mt-2">
+                Truth: Girls/women are underdiagnosed due to masking (copying
+                social behaviors) or stereotypes (e.g., ADHD in girls labeled as
+                "daydreaming")
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="myth-card block p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 cursor-pointer transition-all duration-200"
+          >
+            <h5
+              class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Myth 7
+            </h5>
+            <div
+              class="myth-statement text-gray-700 dark:text-gray-400 text-base"
+            >
+              <p>“Neurodivergent people can’t succeed in school or careers.”</p>
+            </div>
+            <div class="myth-reality text-gray-700 dark:text-gray-400 text-sm">
+              <p class="mt-2">
+                Truth: With accommodations (e.g., flexible deadlines, quiet
+                workspaces), they excel. Many innovators (Daniel Radcliffe,
+                Temple Grandin) are neurodivergent.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="myth-card block p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 cursor-pointer transition-all duration-200"
+          >
+            <h5
+              class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Myth 8
+            </h5>
+            <div
+              class="myth-statement text-gray-700 dark:text-gray-400 text-base"
+            >
+              <p>“Stimming (e.g., rocking, hand-flapping) is bad behavior.”</p>
+            </div>
+            <div class="myth-reality text-gray-700 dark:text-gray-400 text-sm">
+              <p class="mt-2">
+                Truth: Stimming regulates emotions and sensory input.
+                Suppressing it can cause distress.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="myth-card block p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 cursor-pointer transition-all duration-200"
+          >
+            <h5
+              class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Myth 9
+            </h5>
+            <div
+              class="myth-statement text-gray-700 dark:text-gray-400 text-base"
+            >
+              <p>“They don’t want friends—they prefer to be alone.”</p>
+            </div>
+            <div class="myth-reality text-gray-700 dark:text-gray-400 text-sm">
+              <p class="mt-2">
+                Truth: Many crave connection but struggle with social norms.
+                Inclusive environments help them build relationships.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="takeaways" class="py-24 md:py-32 bg-gray-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-left">
+        <div class="max-w-5xl mx-auto mb-8">
+          <h2 class="text-3xl md:text-3xl text-gray-800 font-bold mb-4">
+            Takeaways
+          </h2>
+          <p class="text-xl md:text-2xl text-gray-600 leading-relaxed">
+            <span class="font-semibold">Is neurodiversity a disability?</span>
+            <span
+              class="text-gray-500 hover:text-gray-700 transition-colors duration-200"
+            >
+              No, it is not a disability. Rather, it represents the unique
+              cognitive process on how a person understanding their world.
+            </span>
+          </p>
+        </div>
+        <div class="max-w-5xl mx-auto mb-12">
+          <p class="text-lg text-gray-700">
+            Here are some suggestions of what we should do regarding
+            neurodiversity:
+          </p>
+        </div>
+        <div
+          class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-1 gap-6 mb-16 md:mb-24"
+        >
+          <a
+            href="#"
+            class="block p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 transition-all duration-200"
+          >
+            <h5
+              class="mb-8 mt-4 text-5xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Understand
+            </h5>
+            <p
+              class="font-normal text-gray-700 dark:text-gray-400 text-sm leading-relaxed"
+            >
+              Understanding neurodivergent individuals goes beyond simply
+              acknowledging their differences. It requires a genuine effort to
+              learn about their unique ways of thinking, processing information,
+              and experiencing the world. Take the initiative to learn about
+              different neurodivergent conditions (autism, ADHD, dyslexia,
+              dyspraxia, Tourette's, etc.) and the diverse ways they can
+              manifest. Be aware that each individual within a neurodivergent
+              group is still unique. Understand that neurodivergence often comes
+              with unique strengths and talents. Focus on identifying and
+              appreciating these abilities rather than solely focusing on
+              perceived deficits.There is no single "right" way to be. Embrace
+              the diversity of human neurobiology and respect each individual's
+              unique way of navigating the world.
+            </p>
+          </a>
+          <a
+            href="#"
+            class="block p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 transition-all duration-200"
+          >
+            <h5
+              class="mb-8 mt-4 text-5xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Support
+            </h5>
+            <p
+              class="font-normal text-gray-700 dark:text-gray-400 text-sm leading-relaxed"
+            >
+              Providing support means creating environments and systems that are
+              inclusive, accessible, and tailored to the needs of neurodivergent
+              individuals. Be willing to make reasonable adjustments in various
+              settings (educational, workplace, social) to support their needs.
+              This might include providing quiet workspaces, visual aids,
+              flexible deadlines, clear instructions, or alternative
+              communication methods. Connect individuals with resources and
+              tools that can help them thrive, such as assistive technologies,
+              support groups, therapists specializing in neurodivergence, and
+              educational materials. Actively work to remove barriers that might
+              prevent neurodivergent individuals from accessing education,
+              employment, social activities, and other opportunities.
+            </p>
+          </a>
+          <a
+            href="#"
+            class="block p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 transition-all duration-200"
+          >
+            <h5
+              class="mb-8 mt-4 text-5xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Empower
+            </h5>
+            <p
+              class="font-normal text-gray-700 dark:text-gray-400 text-sm leading-relaxed"
+            >
+              It goes beyond general support and involves more active and
+              personalized assistance to enable neurodivergent individuals to
+              achieve their goals and participate fully in society. Create
+              opportunities where their neurodivergent traits can be an asset.
+              Empower neurodivergent individuals to understand their own needs
+              and advocate for themselves effectively. Provide them with the
+              tools and knowledge to do so. Acknowledge and celebrate their
+              achievements, no matter how small they may seem. This reinforces
+              positive growth and encourages continued progress.
+            </p>
+          </a>
+        </div>
+        <h1
+          class="text-xl md:text-3xl font-bold text-center mb-24 md:mb-32 max-w-3xl mx-auto leading-normal"
+        >
+          Don’t we all need to be understood, supported, and empowered?
+        </h1>
+      </div>
+    </section>
+
+    <section id="best-practices" class="py-24 md:py-32 bg-gray-100">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-left">
+        <div
+          class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between gap-8 md:gap-x-16 lg:gap-x-24"
+        >
+          <h2 class="text-3xl md:text-4xl text-gray-800 font-bold max-w-sm">
+            Best Practices
+          </h2>
+          <div>
+            <p
+              class="text-base md:text-lg text-gray-600 max-w-2xl leading-relaxed"
+            >
+              The language surrounding neurodiversity is continually evolving.
+              Terms like "neurotypical" and "neurodivergent" have gained
+              popularity in recent years, but there is ongoing debate about
+              their accuracy and inclusivity. <br /><br />
+              Historically, neurodivergence has been associated with negative
+              connotations and deficit-based language. Moving towards
+              strengths-based and person-first language is crucial in promoting
+              a positive and empowering view of neurodiversity. <br /><br />
+              Some individuals prefer to self-identify as neurodivergent, while
+              others prefer specific diagnostic labels. Respecting individual
+              preferences and avoiding assumptions about identity is essential.
+              <br /><br />
+              Allowing the students to identify to whom they wish too. It could
+              be that they do not wish to register with the Disability Team, but
+              do want their tutors to know. <br /><br />
+              <span class="text-2xl font-semibold"
+                >Examples of Best Practices in education:</span
+              >
+              <br /><br />
+            </p>
+            <ol
+              class="list-decimal list-outside text-base md:text-lg text-gray-600 max-w-2xl leading-relaxed"
+            >
+              <li class="ml-6">
+                Implementing Universal Design for Learning (UDL) principles
+                helps create a flexible learning environment that accommodates
+                diverse learning styles and needs. This includes offering
+                multiple means of representation (e.g., visual, auditory,
+                textual), engagement (e.g., choice, relevance, authenticity),
+                and action and expression (e.g., varied response options,
+                assistive technologies).
+              </li>
+              <br />
+              <li class="ml-6">
+                Implement effective screening and support systems for early
+                identification of neurodivergent learners.
+              </li>
+              <br />
+              <li class="ml-6">
+                Recognizing that each neurodivergent student is unique, provide
+                tailored accommodations and support plans based on individual
+                strengths and challenges. This might involve adjusting
+                assignments, providing assistive technology, or allowing for
+                flexible deadlines (deadlines can also be non-negotiable as some
+                students prefer these strict guidelines from their tutors to
+                keep them on track).
+              </li>
+              <br />
+              <li class="ml-6">
+                Develop and implement tailored plans to address the unique needs
+                of each student.
+              </li>
+              <br />
+              <li class="ml-6">
+                Focus on recognizing and building upon the unique strengths and
+                talents of neurodivergent students rather than solely focusing
+                on deficits. Encourage positive self-esteem and a sense of
+                belonging.
+              </li>
+              <br />
+              <li class="ml-6">
+                Provide educators with professional development on
+                neurodiversity and inclusive teaching practices.
+              </li>
+              <br />
+            </ol>
+            <a
+              href="#"
+              class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-300 hover:shadow-lg transition-all duration-300 text-lg font-medium mt-8"
+              >Representation & References</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12 rounded-t-lg">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-sm">&copy; 2024 ispf. All rights reserved.</p>
+        <div class="flex justify-center space-x-4 mt-4">
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white transition-colors duration-200"
+            >Privacy Policy</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white transition-colors duration-200"
+            >Terms of Service</a
+          >
+        </div>
+      </div>
+    </footer>
 
     <script>
-      // Get references to the language switcher elements
+      // Language switcher functionality
       const languageSwitcher = document.getElementById("languageSwitcher");
       const languageText = document.getElementById("languageText");
+      let isEnglish = false;
 
-      // Initial language state (true for English, false for Indonesian)
-      let isEnglish = false; // Start with Indonesian (ID)
-
-      // Add a click event listener to the language switcher square
       languageSwitcher.addEventListener("click", () => {
-        // Toggle the language state
         isEnglish = !isEnglish;
-
-        // Update the text content and background color based on the language state
         if (isEnglish) {
           languageText.textContent = "EN";
-          languageSwitcher.classList.remove("bg-white");
-          languageSwitcher.classList.remove("text-black");
-          languageSwitcher.classList.add("bg-black"); // Change color for English
-          languageSwitcher.classList.add("text-white");
+          languageSwitcher.classList.remove("bg-white", "text-black");
+          languageSwitcher.classList.add("bg-black", "text-white");
         } else {
           languageText.textContent = "ID";
-          languageSwitcher.classList.remove("bg-black");
-          languageSwitcher.classList.remove("text-white");
-          languageSwitcher.classList.add("bg-white"); // Revert to original color for Indonesian
-          languageSwitcher.classList.add("text-black");
+          languageSwitcher.classList.remove("bg-black", "text-white");
+          languageSwitcher.classList.add("bg-white", "text-black");
         }
+      });
+
+      // Myth card toggle functionality
+      document.querySelectorAll(".myth-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          card.classList.toggle("active");
+        });
+      });
+
+      // Mobile menu toggle functionality
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
       });
     </script>
   </body>
