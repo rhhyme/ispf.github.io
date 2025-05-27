@@ -14,15 +14,31 @@
       body {
         font-family: "Plus Jakarta Sans", sans-serif;
       }
-      /* Styles for showing myth and revealing reality on click */
+      /* Base styles for myth-reality: hidden by default with smooth transition */
       .myth-reality {
-        display: none; /* Reality is hidden by default */
+        max-height: 0; /* Initially hidden */
+        opacity: 0; /* Initially transparent */
+        overflow: hidden; /* Hide overflowing content */
+        transition: max-height 0.5s ease-out, opacity 0.5s ease-out,
+          padding-top 0.5s ease-out; /* Smooth transition for reveal */
+        padding-top: 0; /* No padding when hidden */
       }
-      .myth-card.active .myth-statement {
-        display: none; /* Hide the myth statement when the card is active (clicked) */
+
+      /* Desktop hover effect (for screens wider than 768px, i.e., md breakpoint and up) */
+      @media (min-width: 768px) {
+        .myth-card:hover .myth-reality {
+          max-height: 200px; /* Sufficiently large height to reveal content */
+          opacity: 1; /* Fully visible */
+          padding-top: 0.5rem; /* mt-2 equivalent from original HTML */
+        }
       }
-      .myth-card.active .myth-reality {
-        display: block; /* Show the reality when the card is active (clicked) */
+
+      /* Mobile tap effect (using a class toggled by JavaScript) */
+      /* This class is applied when the card is tapped on touch devices or small screens */
+      .myth-card.is-revealed .myth-reality {
+        max-height: 200px; /* Sufficiently large height to reveal content */
+        opacity: 1; /* Fully visible */
+        padding-top: 0.5rem; /* mt-2 equivalent from original HTML */
       }
     </style>
   </head>
@@ -428,7 +444,7 @@
         </div>
 
         <div
-          class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24 md:mb-32"
+          class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24 md:mb-32 items-start"
         >
           <div
             class="myth-card block p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 cursor-pointer transition-all duration-200"
@@ -653,6 +669,37 @@
         </div>
       </div>
     </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const mythCards = document.querySelectorAll(".myth-card");
+
+        // Function to determine if the device is likely a touch device or a small screen
+        // This helps apply tap behavior on mobile and hover on desktop
+        function isTouchOrSmallScreen() {
+          // Check for touch events support or if the screen width is less than the md breakpoint (768px)
+          return (
+            "ontouchstart" in window ||
+            navigator.maxTouchPoints > 0 ||
+            navigator.msMaxTouchPoints > 0 ||
+            window.innerWidth < 768
+          );
+        }
+
+        mythCards.forEach((card) => {
+          card.addEventListener("click", function () {
+            // Only apply the tap toggle logic if it's a touch device or a small screen
+            if (isTouchOrSmallScreen()) {
+              // Toggle the 'is-revealed' class on the clicked card
+              // This class controls the visibility of .myth-reality via CSS
+              this.classList.toggle("is-revealed");
+            }
+            // For desktop (non-touch and larger screens), the CSS :hover pseudo-class
+            // will automatically handle the reveal, so no JavaScript action is needed here.
+          });
+        });
+      });
+    </script>
 
     <section id="takeaways" class="py-24 md:py-32 bg-gray-50">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-left">
