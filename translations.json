@@ -99,7 +99,8 @@
     "goal3_desc": "Good Health and Well-being",
     "goal4": "Goal 4",
     "goal4_desc": "Quality Education",
-    "goal10": "Reduced Inequality",
+    "goal10": "Goal 10",
+    "goal10_desc": "Reduced Inequality",
 
     "who_we_serve_title": "Who we serve",
     "who_we_serve_1": "ARU and Sampoerna's Neurodivergent (ND) staff and students.",
@@ -177,7 +178,18 @@
     "table_head_resource": "Resource",
     "table_head_no": "No",
     "table_head_detail": "Detail",
-    "table_head_notes": "Significance/Notes"
+    "table_head_notes": "Significance/Notes",
+
+    "material_1_detail": "Author: Elle McNicoll<br />Publication Year: 2020<br />Synopsis: A middle-grade novel following Addie, an autistic girl who challenges societal misconceptions and uncovers hidden histories within her community. The narrative emphasizes her personal growth and advocacy for inclusion, offering a thoughtful portrayal of ND that resonates with young readers.",
+    "material_1_significance": "Recommended for its authentic portrayal of an autistic protagonist and its challenge to common ND stereotypes. The book fosters awareness and empathy by presenting neurodiversity as a natural variation of human experience rather than a deficit or anomaly.",
+    "material_2_detail": "Director: Andreas Öhman<br />Release: 2010<br />Synopsis: A Swedish film that explores the life of an Asperger's boy living with his elder brother and the latter's girlfriend. When a conflict results in a dramatic upheaval in their household, the protagonist embarks on a mission to find a new partner for his brother.",
+    "material_2_significance": "Provides a comparative framework by illustrating common narrative tropes in ND representation. Its similarities with later films (e.g., Aku Jati, Aku Asperger) make it a valuable resource for understanding how certain themes in portraying ND are sustained across cultures and time.",
+    "material_3_detail": "Director: Karan Johar<br />Release: 2010<br />Synopsis: Follows Rizwan Khan, a man with Asperger's syndrome, as he embarks on a transformative journey across America in the aftermath of the September 11 attacks. The film explores themes of prejudice, identity, and acceptance, offering a multifaceted portrayal of neurodiversity in a challenging socio-political context.",
+    "material_3_significance": "Notable for its sensitive portrayal of neurodiversity, the film explores the intersection of disability, cultural identity, and social prejudice. Its narrative invites viewers to reflect on the importance of acceptance and resilience in the face of societal challenges.",
+    "material_4_detail": "Director: Fajar Bustomi<br />Release: 31 October 2024<br />Synopsis: Follows Jati, a boy with Asperger's syndrome, whose rigid routines and stereotypical portrayal spark public debate. The film has attracted attention on social media for its use of outdated terminology and a portrayal that simplifies complex ND experiences into easily digestible behavioral tropes.",
+    "material_4_significance": "Serves as a case study in how stereotypical portrayals can oversimplify neurodivergent experiences, prompting discussions on the need for more authentic and nuanced representations in media.",
+    "material_5_detail": "Director: Hanung Bramantyo<br />Release: 8 September 2022<br />Synopsis: A remake of a 2013 South Korean film, this movie tells the story of an autistic man wrongfully accused of rape and murder. Blending dramatic and comedic elements, it seeks to engage a broader audience while addressing themes of injustice and empathy.",
+    "material_5_significance": "Demonstrates how genre adaptation (from drama to comedy) can influence public perceptions of neurodiversity and highlights the societal implications of wrongful accusations and empathy toward ND individuals."
   },
 
   "id": {
@@ -351,6 +363,29 @@
     "key_list_4": "Bagaimana guru, teman sebaya, atau anggota keluarga berinteraksi dengan karakter?",
     "key_list_5": "Apakah perjalanan karakter memperkuat stereotip (misalnya, \"jenius yang bermasalah\" atau \"penyendiri antisosial\")?",
     "key_list_6": "Apakah cerita mempromosikan empati dan inklusi, ataukah secara tidak sengaja memperkuat ketakutan atau rasa kasihan?",
-    "key_list_7": "Siapa yang menceritakan kisah itu—apakah narasi tersebut mencakup suara dan perspektif karakter neurodivergen itu sendiri?"
+    "key_list_7": "Siapa yang menceritakan kisah itu—apakah narasi tersebut mencakup suara dan perspektif karakter neurodivergen itu sendiri?",
+
+    "goal3": "Goal 3",
+    "goal3_desc": "Kesehatan dan Kesejahteraan yang Baik",
+    "goal4": "Goal 4",
+    "goal4_desc": "Pendidikan Berkualitas",
+    "goal10": "Goal 10",
+    "goal10_desc": "Mengurangi Kesenjangan",
+
+    "table_head_resource": "Sumber",
+    "table_head_no": "No",
+    "table_head_detail": "Perincian",
+    "table_head_notes": "Catatan",
+
+    "material_1_detail": "Penulis: Elle McNicoll<br />Tahun Publikasi: 2020<br />Sinopsis: Sebuah novel tingkat menengah yang mengikuti Addie, seorang gadis autis yang menantang kesalahpahaman masyarakat dan mengungkap sejarah tersembunyi dalam komunitasnya. Narasi ini menekankan pertumbuhan pribadi dan advokasinya untuk inklusi, menawarkan penggambaran ND yang bijaksana yang beresonansi dengan pembaca muda.",
+    "material_1_significance": "Direkomendasikan karena penggambaran otentik seorang protagonis autis dan tantangannya terhadap stereotip ND umum. Buku ini menumbuhkan kesadaran dan empati dengan menyajikan neurodiversitas sebagai variasi alami pengalaman manusia daripada defisit atau anomali.",
+    "material_2_detail": "Sutradara: Andreas Öhman<br />Rilis: 2010<br />Sinopsis: Sebuah film Swedia yang mengeksplorasi kehidupan seorang anak Asperger yang tinggal bersama kakak laki-lakinya dan pacar kakaknya. Ketika konflik mengakibatkan gejolak dramatis di rumah tangga mereka, sang protagonis memulai misi untuk menemukan pasangan baru untuk kakaknya.",
+    "material_2_significance": "Menyediakan kerangka komparatif dengan mengilustrasikan kiasan naratif umum dalam representasi ND. Kemiripannya dengan film-film selanjutnya (misalnya, Aku Jati, Aku Asperger) menjadikannya sumber daya berharga untuk memahami bagaimana tema-tema tertentu dalam menggambarkan ND dipertahankan di berbagai budaya dan waktu.",
+    "material_3_detail": "Sutradara: Karan Johar<br />Rilis: 2010<br />Sinopsis: Mengikuti Rizwan Khan, seorang pria dengan sindrom Asperger, saat ia memulai perjalanan transformatif melintasi Amerika setelah serangan 11 September. Film ini mengeksplorasi tema-tema prasangka, identitas, dan penerimaan, menawarkan penggambaran neurodiversitas yang beragam dalam konteks sosial-politik yang menantang.",
+    "material_3_significance": "Terkenal karena penggambaran neurodiversitas yang sensitif, film ini mengeksplorasi persimpangan disabilitas, identitas budaya, dan prasangka sosial. Narasinya mengundang penonton untuk merenungkan pentingnya penerimaan dan ketahanan dalam menghadapi tantangan masyarakat.",
+    "material_4_detail": "Sutradara: Fajar Bustomi<br />Rilis: 31 Oktober 2024<br />Sinopsis: Mengikuti Jati, seorang anak laki-laki dengan sindrom Asperger, yang rutinitas kaku dan penggambaran stereotipnya memicu debat publik. Film ini telah menarik perhatian di media sosial karena penggunaan terminologi yang usang dan penggambaran yang menyederhanakan pengalaman ND yang kompleks menjadi kiasan perilaku yang mudah dicerna.",
+    "material_4_significance": "Berfungsi sebagai studi kasus tentang bagaimana penggambaran stereotip dapat menyederhanakan pengalaman neurodivergen, memicu diskusi tentang perlunya representasi yang lebih otentik dan bernuansa di media.",
+    "material_5_detail": "Sutradara: Hanung Bramantyo<br />Rilis: 8 September 2022<br />Sinopsis: Sebuah remake dari film Korea Selatan tahun 2013, film ini menceritakan kisah seorang pria autis yang secara salah dituduh melakukan pemerkosaan dan pembunuhan. Mencampur elemen dramatis dan komedi, film ini berusaha melibatkan audiens yang lebih luas sambil membahas tema-tema ketidakadilan dan empati.",
+    "material_5_significance": "Menunjukkan bagaimana adaptasi genre (dari drama ke komedi) dapat memengaruhi persepsi publik tentang neurodiversitas dan menyoroti implikasi sosial dari tuduhan yang salah dan empati terhadap individu ND."
   }
 }
