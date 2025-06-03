@@ -76,6 +76,8 @@
     "bp_list_item_5": "Focus on recognizing and building upon the unique strengths and talents of neurodivergent students rather than solely focusing on deficits. Encourage positive self-esteem and a sense of belonging.",
     "bp_list_item_6": "Provide educators with professional development on neurodiversity and inclusive teaching practices.",
     "representation_link": "Representation & References",
+    "module_link": "Example of NIE Module",
+
     "footer_copyright": "© 2024 ispf. All rights reserved.",
     "footer_privacy": "Privacy Policy",
     "footer_terms": "Terms of Service",
@@ -141,6 +143,7 @@
     "team_member_arkhadi_role": "Team Member",
     "team_member_arkhadi_specialty": "Educational Technology, Neurodiversity Specialist",
     "publication_title": "Publication",
+    "publication_desc": "One of our outcomes is to disseminate our works through several channels of publication.  We published an article on NEXUS Education blog in February 27, 2025.   The article highlights that both England and Jakarta, Indonesia, recognize neurodiversity—including conditions like autism, ADHD, and dyslexia—as natural neurological variations rather than deficiencies.  Despite this understanding, neurodivergent individuals continue to face stigma and misunderstanding in both regions. While the UK utilizes the Equality Act 2010 to prohibit discrimination, Indonesia employs Law No. 8/16 to foster a human rights-based approach to neurodiversity. Support mechanisms vary, with the UK relying on collaboration between the NHS and educational organizations, whereas Indonesia largely depends on NGOs and special needs schools. Ultimately, both nations acknowledge the critical need to address neurodivergence within education to ensure quality learning opportunities for all citizens.",
     "publication_another_title": "Another Publications: Per May 22, 2025",
     "publication_1": "Journal article for WPLL journal special issue - revisions accepted and awaiting publication",
     "publication_2": "Presented at conference: ECSDN Conference Fri 24 Jan 2025 Online and awaiting publication of article",
@@ -161,7 +164,7 @@
     "examine_title": "How can We Examine Representation in Novels and Films",
     "examine_desc": "You don't need to be an expert to start looking critically at stories. Here are a few simple steps to help you begin:",
     "examine_list_1": "<strong>Choose your story:</strong> Select a novel, film, or series where a character is described or implied to be neurodivergent (e.g., autistic, ADHD, dyslexic, etc.).",
-    "examine_list_2": "Observe closely:</strong> Pay attention to how the character is introduced, treated by others, and how their neurodivergence is discussed (or not).",
+    "examine_list_2": "<strong>Observe closely:</strong> Pay attention to how the character is introduced, treated by others, and how their neurodivergence is discussed (or not).",
     "examine_list_3": "<strong>Look beyond the plot:</strong> Ask yourself what the story wants you to feel about this character. Are they being respected or misunderstood? Are they shown with agency or always needing help?",
     "examine_list_4": "<strong>Reflect on the impact:</strong> Think about how this portrayal might affect someone watching or reading it – especially someone who is neurodivergent  hemselves.",
 
@@ -271,6 +274,8 @@
     "bp_list_item_5": "Fokus pada pengenalan dan pembangunan kekuatan dan bakat unik siswa neurodivergen daripada hanya berfokus pada defisit. Mendorong harga diri positif dan rasa memiliki.",
     "bp_list_item_6": "Memberikan pendidik pengembangan profesional tentang neurodiversitas dan praktik pengajaran inklusif.",
     "representation_link": "Representasi & Referensi",
+    "module_link": "Contoh Modul NIE",
+
     "footer_copyright": "© 2024 ispf. Hak cipta dilindungi undang-undang.",
     "footer_privacy": "Kebijakan Privasi",
     "footer_terms": "Ketentuan Layanan",
@@ -335,6 +340,7 @@
     "team_member_arkhadi_role": "Anggota Tim",
     "team_member_arkhadi_specialty": "Spesialis Teknologi Pendidikan, Neurodiversitas",
     "publication_title": "Publikasi",
+    "publication_desc": "Salah satu hasil kami adalah menyebarluaskan karya kami melalui beberapa saluran publikasi. Kami menerbitkan sebuah artikel di blog NEXUS Education pada tanggal 27 Februari 2025. Artikel tersebut menyoroti bahwa baik Inggris maupun Jakarta, Indonesia, mengakui neurodiversitas—termasuk kondisi seperti autisme, ADHD, dan disleksia—sebagai variasi neurologis alami, bukan kekurangan. Meskipun demikian, individu neurodivergen terus menghadapi stigma dan kesalahpahaman di kedua wilayah tersebut. Sementara Inggris menggunakan Undang-Undang Kesetaraan 2010 untuk melarang diskriminasi, Indonesia menggunakan Undang-Undang No. 8/16 untuk mendorong pendekatan berbasis hak asasi manusia terhadap neurodiversitas. Mekanisme dukungan bervariasi, dengan Inggris mengandalkan kolaborasi antara NHS dan organisasi pendidikan, sedangkan Indonesia sangat bergantung pada LSM dan sekolah kebutuhan khusus. Pada akhirnya, kedua negara mengakui kebutuhan kritis untuk mengatasi neurodivergensi dalam pendidikan guna memastikan kesempatan belajar yang berkualitas bagi semua warga negara.",
     "publication_another_title": "Publikasi Lainnya: Per 22 Mei 2025",
     "publication_1": "Artikel jurnal untuk edisi khusus jurnal WPLL - revisi diterima dan menunggu publikasi",
     "publication_2": "Dipresentasikan pada konferensi: Konferensi ECSDN Jumat 24 Jan 2025 Online dan menunggu publikasi artikel",
