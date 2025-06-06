@@ -58,6 +58,13 @@ class LanguageSwitcher {
       document.title = langData.title;
     }
 
+    if (langData.videoUrl) {
+      const videoPlayer = document.getElementById("youtube-player");
+      if (videoPlayer) {
+        videoPlayer.src = langData.youtubeUrl;
+      }
+    }
+
     // Update elements with data-key
     document.querySelectorAll("[data-key]").forEach((element) => {
       const key = element.getAttribute("data-key");
@@ -92,8 +99,23 @@ class LanguageSwitcher {
       this.currentLanguage = langCode;
       localStorage.setItem("language", langCode);
       this.applyTranslations();
+      this.updateVideoSource();
     } else {
       console.warn(`Language code '${langCode}' not found.`);
+    }
+  }
+
+  updateVideoSource() {
+    const videoPlayer = document.getElementById("youtube-player");
+    if (!videoPlayer) return;
+
+    const videoSources = {
+      en: "https://www.youtube.com/embed/asqG542EEj4?autoplay=1&cc_load_policy=1", // Your English video
+      id: "https://www.youtube.com/embed/aaxF9bSGlv8?autoplay=1&cc_load_policy=1", // Replace with Indonesian video ID
+    };
+
+    if (videoSources[this.currentLanguage]) {
+      videoPlayer.src = videoSources[this.currentLanguage];
     }
   }
 
@@ -119,6 +141,7 @@ class LanguageSwitcher {
     });
 
     this.applyTranslations(); // Apply translations on initial load
+    this.updateVideoSource();
   }
 
   /**
