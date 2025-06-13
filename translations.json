@@ -194,7 +194,16 @@
     "material_5_detail": "Director: Hanung Bramantyo<br />Release: 8 September 2022<br />Synopsis: A remake of a 2013 South Korean film, this movie tells the story of an autistic man wrongfully accused of rape and murder. Blending dramatic and comedic elements, it seeks to engage a broader audience while addressing themes of injustice and empathy.",
     "material_5_significance": "Demonstrates how genre adaptation (from drama to comedy) can influence public perceptions of neurodiversity and highlights the societal implications of wrongful accusations and empathy toward ND individuals.",
 
-    "aru_event_paragraph_1": "Thursday, November 14, 2024, the ISPF team from Sampoerna University and Anglia Ruskin University held a public engagement session at the ARU Chelmsford campus, setting up a stand in the Lord Ashcroft Building lobby featuring informational leaflets about their joint project, an interactive neurodiversity-themed game, and engaging giveaways such as squishy balls, colored lenses to simulate dyslexia reading, and magnetic LEGO tiles;<br/><br/>as students passed between classes, many stopped to chat, with some sharing personal stories about neurodiversity within their families and others opening up about their own experiences navigating university as neurodivergent students, while many were simply curious about the project, neurodiversity, or even Indonesia, especially after sampling some of the Indonesian snacks they brought;<br/><br/>it was a vibrant afternoon of sharing and learning, reminding them of the power of small conversations in building awareness and empathy."
+    "aru_event_paragraph_1": "Thursday, November 14, 2024, the ISPF team from Sampoerna University and Anglia Ruskin University held a public engagement session at the ARU Chelmsford campus, setting up a stand in the Lord Ashcroft Building lobby featuring informational leaflets about their joint project, an interactive neurodiversity-themed game, and engaging giveaways such as squishy balls, colored lenses to simulate dyslexia reading, and magnetic LEGO tiles;<br/><br/>as students passed between classes, many stopped to chat, with some sharing personal stories about neurodiversity within their families and others opening up about their own experiences navigating university as neurodivergent students, while many were simply curious about the project, neurodiversity, or even Indonesia, especially after sampling some of the Indonesian snacks they brought;<br/><br/>it was a vibrant afternoon of sharing and learning, reminding them of the power of small conversations in building awareness and empathy.",
+
+    "trace_desc": "To provide a more structured approach to these questions, we can use the <strong>TRACE framework</strong>. Developed to deconstruct media portrayals of neurodiversity, TRACE offers five key areas for analysis. The table below breaks down each component of the framework",
+    "trace_head": "TRACE: A Framework for Analyzing Representation",
+    "tropes_desc": "What recurring character types or clichés appear? (e.g., genius, burden, comic relief)",
+    "rep_desc": "Which model is adopted: medical, charity, social, or neurodiversity?",
+    "agency_desc": "Does the neurodivergent character have their own voice, perspective, and decision-making?",
+    "culture_desc": "What terms or labels are used? Are they inclusive, outdated, or stigmatizing?",
+    "emerging_desc": "Are there counter-narratives or alternative portrayals, especially from self-advocates or lived experience?",
+    "resource_bridge": "Now, let's apply this framework to real-world examples. The following table examines several well-known books and films, offering a brief analysis of how they represent neurodiversity. This will help illustrate how the concepts from the TRACE framework appear in actual media."
   },
 
   "id": {
@@ -371,6 +380,15 @@
     "key_list_6": "Apakah cerita mempromosikan empati dan inklusi, ataukah secara tidak sengaja memperkuat ketakutan atau rasa kasihan?",
     "key_list_7": "Siapa yang menceritakan kisah itu—apakah narasi tersebut mencakup suara dan perspektif karakter neurodivergen itu sendiri?",
 
+    "trace_desc": "Untuk memberikan pendekatan yang lebih terstruktur pada pertanyaan-pertanyaan ini, kita dapat menggunakan <strong>kerangka TRACE</strong>. Dikembangkan untuk mendekonstruksi penggambaran keragaman saraf di media, TRACE menawarkan lima area utama untuk dianalisis. Tabel di bawah ini menguraikan setiap komponen dari kerangka kerja tersebut",
+    "trace_head": "TRACE: Kerangka untuk Menganalisis Representasi",
+    "tropes_desc": "Tipe karakter atau klise berulang apa yang muncul? (misalnya, jenius, beban, comic relief)",
+    "rep_desc": "Model mana yang diadopsi: medis, amal, sosial, atau keragaman saraf?",
+    "agency_desc": "Apakah karakter neurodivergen memiliki suara, perspektif, dan pengambilan keputusannya sendiri?",
+    "culture_desc": "Istilah atau label apa yang digunakan? Apakah inklusif, ketinggalan zaman, atau menstigmatisasi?",
+    "emerging_desc": "Apakah ada kontra-narasi atau penggambaran alternatif, terutama dari para pembela diri atau pengalaman hidup?",
+    "resource_bridge": "Sekarang, mari kita terapkan kerangka kerja ini pada contoh-contoh di dunia nyata. Tabel berikut mengkaji beberapa buku dan film terkenal, menawarkan analisis singkat tentang bagaimana mereka merepresentasikan keragaman saraf. Ini akan membantu mengilustrasikan bagaimana konsep dari kerangka TRACE muncul di media yang sebenarnya.",
+
     "goal3": "Goal 3",
     "goal3_desc": "Kesehatan dan Kesejahteraan yang Baik",
     "goal4": "Goal 4",
@@ -393,6 +411,7 @@
     "material_4_significance": "Berfungsi sebagai studi kasus tentang bagaimana penggambaran stereotip dapat menyederhanakan pengalaman neurodivergen, memicu diskusi tentang perlunya representasi yang lebih otentik dan bernuansa di media.",
     "material_5_detail": "Sutradara: Hanung Bramantyo<br />Rilis: 8 September 2022<br />Sinopsis: Sebuah remake dari film Korea Selatan tahun 2013, film ini menceritakan kisah seorang pria autis yang secara salah dituduh melakukan pemerkosaan dan pembunuhan. Mencampur elemen dramatis dan komedi, film ini berusaha melibatkan audiens yang lebih luas sambil membahas tema-tema ketidakadilan dan empati.",
     "material_5_significance": "Menunjukkan bagaimana adaptasi genre (dari drama ke komedi) dapat memengaruhi persepsi publik tentang neurodiversitas dan menyoroti implikasi sosial dari tuduhan yang salah dan empati terhadap individu ND.",
+
     "youtubeUrl": "https://www.youtube.com/embed/aaxF9bSGlv8"
   }
 }
