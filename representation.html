@@ -15,86 +15,105 @@
         font-family: "Plus Jakarta Sans", sans-serif;
       }
 
-      /* Responsive Table Styles for Mobile (screens smaller than md) */
+      /* Responsive Table Styles for screens smaller than 768px */
       @media (max-width: 767px) {
-        .responsive-table table,
-        .responsive-table thead,
-        .responsive-table tbody,
-        .responsive-table th,
-        .responsive-table td,
-        .responsive-table tr {
-          display: block;
-        }
-
+        /* Hide the original table header */
         .responsive-table thead {
           display: none;
         }
 
+        /* Make table elements block-level */
+        .responsive-table table,
+        .responsive-table tbody,
+        .responsive-table tr,
+        .responsive-table td {
+          display: block;
+        }
+
+        /* Style each row as a card */
         .responsive-table tr {
-          border: 1px solid #e5e7eb;
-          margin-bottom: 1rem;
-          border-radius: 0.75rem;
-          background-color: white;
-          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-          padding: 1rem;
+          background-color: #ffffff;
+          border: 1px solid #e5e7eb; /* gray-200 */
+          border-radius: 0.75rem; /* rounded-lg */
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+            0 2px 4px -2px rgba(0, 0, 0, 0.1); /* shadow-md */
+          margin-bottom: 1.5rem;
+          padding: 1.25rem; /* p-5 */
+          overflow: hidden;
         }
 
         .responsive-table td {
           border: none;
-          display: flex;
-          flex-direction: column;
-          padding: 0.75rem 0;
-          border-bottom: 1px solid #f3f4f6;
-        }
-
-        .responsive-table td[data-label="No"] {
-          display: block;
           padding: 0;
-          border-bottom: none;
         }
 
-        .responsive-table td[data-label="No"]::before {
-          display: inline;
-          margin-right: 0.5rem;
-          margin-bottom: 0;
+        /* --- Specific styles for the TRACE table cards --- */
+        #trace .responsive-table tr {
+          display: grid;
+          grid-template-areas:
+            "letter item"
+            "letter description";
+          grid-template-columns: auto 1fr;
+          gap: 0.25rem 1rem;
+          align-items: center; /* <<< This is the corrected line */
         }
 
-        .responsive-table td:last-child {
-          border-bottom: none;
+        #trace .responsive-table td:nth-child(1) {
+          grid-area: letter;
+          font-size: 2.25rem; /* text-4xl */
+          font-weight: 800; /* extrabold */
+          color: #3b82f6; /* blue-500 */
         }
 
-        .responsive-table td::before {
+        #trace .responsive-table td:nth-child(2) {
+          grid-area: item;
+          font-size: 1.125rem; /* text-lg */
+          font-weight: 700;
+          color: #1f2937; /* gray-800 */
+        }
+
+        #trace .responsive-table td:nth-child(3) {
+          grid-area: description;
+          color: #4b5563; /* gray-600 */
+        }
+
+        /* --- Specific styles for the RESOURCES table cards --- */
+        #resources .responsive-table td[data-label="No"] {
+          display: none; /* Hide the number column on mobile */
+        }
+
+        #resources .responsive-table td {
+          padding: 0.5rem 0;
+        }
+
+        /* Add a separator between fields */
+        #resources .responsive-table td:not(:last-child) {
+          border-bottom: 1px solid #f3f4f6; /* gray-100 */
+        }
+
+        /* Style the 'Resource' name as the card title */
+        #resources .responsive-table td[data-label="Resource"] {
+          font-size: 1.125rem; /* text-lg */
+          font-weight: 700;
+          color: #1f2937; /* gray-800 */
+          padding-bottom: 0.75rem;
+        }
+
+        /* For other fields, use a label-value format */
+        #resources
+          .responsive-table
+          td[data-label]:not([data-label="Resource"])::before {
           content: attr(data-label);
-          font-weight: 700;
-          color: #374151;
-          margin-bottom: 0.25rem;
-          font-size: 0.875rem;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-        }
-
-        .responsive-table td[data-label="No"]::before {
-          color: #000000;
-        }
-
-        .responsive-table td[data-label="Resource"]::before {
-          color: #000000;
-        }
-      }
-
-      /* Enhanced styling for better mobile experience */
-      @media (max-width: 767px) {
-        .responsive-table td[data-label="No"] {
-          font-size: 0.875rem;
-          font-weight: 700;
-          color: #000000;
-          display: inline;
-        }
-
-        .responsive-table td[data-label="Resource"] {
-          font-size: 1.1rem;
+          display: block;
           font-weight: 600;
-          color: #000000;
+          color: #4b5563; /* gray-600 */
+          font-size: 0.875rem; /* text-sm */
+          margin-bottom: 0.25rem;
+        }
+
+        /* Hide the label for the main title cell itself */
+        #resources .responsive-table td[data-label="Resource"]::before {
+          display: none;
         }
       }
     </style>
@@ -283,8 +302,152 @@
             </div>
           </div>
         </section>
-        <section id="resources">
+
+        <section id="trace">
+          <div class="max-w-7xl mx-auto">
+            <p class="text-lg text-gray-700 leading-relaxed mb-8">
+              To provide a more structured approach to these questions, we can
+              use the <strong>TRACE framework</strong>. Developed to deconstruct
+              media portrayals of neurodiversity, TRACE offers five key areas
+              for analysis. The table below breaks down each component of the
+              framework.
+            </p>
+          </div>
           <div
+            class="responsive-table relative overflow-x-auto max-w-7xl mx-auto rounded-lg mb-14"
+          >
+            <table
+              class="w-full text-sm text-left rtl:text-right text-gray-600 dark:text-gray-400"
+            >
+              <thead
+                class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400"
+              >
+                <tr class="rounded-lg">
+                  <th
+                    scope="col"
+                    colspan="3"
+                    class="px-6 py-3 text-center rounded-lg"
+                  >
+                    TRACE: A Framework for Analyzing Representation
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                >
+                  <td
+                    class="px-6 py-4 align-top font-bold text-gray-900"
+                    data-label="T"
+                  >
+                    T
+                  </td>
+                  <td
+                    class="px-6 py-4 font-medium text-gray-900 whitespace-normal align-top"
+                    data-label="Item"
+                  >
+                    Tropes
+                  </td>
+                  <td class="px-6 py-4 align-top" data-label="Description">
+                    What recurring character types or clichés appear? (e.g.,
+                    genius, burden, comic relief)
+                  </td>
+                </tr>
+                <tr
+                  class="bg-gray-50 border-b dark:bg-gray-700 dark:border-gray-700"
+                >
+                  <td
+                    class="px-6 py-4 align-top font-bold text-gray-900"
+                    data-label="R"
+                  >
+                    R
+                  </td>
+                  <td
+                    class="px-6 py-4 font-medium text-gray-900 whitespace-normal align-top"
+                    data-label="Item"
+                  >
+                    Representation Models
+                  </td>
+                  <td class="px-6 py-4 align-top" data-label="Description">
+                    Which model is adopted: medical, charity, social, or
+                    neurodiversity?
+                  </td>
+                </tr>
+                <tr
+                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                >
+                  <td
+                    class="px-6 py-4 align-top font-bold text-gray-900"
+                    data-label="A"
+                  >
+                    A
+                  </td>
+                  <td
+                    class="px-6 py-4 font-medium text-gray-900 whitespace-normal align-top"
+                    data-label="Item"
+                  >
+                    Agency
+                  </td>
+                  <td class="px-6 py-4 align-top" data-label="Description">
+                    Does the neurodivergent character have their own voice,
+                    perspective, and decision-making?
+                  </td>
+                </tr>
+                <tr
+                  class="bg-gray-50 border-b dark:bg-gray-700 dark:border-gray-700"
+                >
+                  <td
+                    class="px-6 py-4 align-top font-bold text-gray-900"
+                    data-label="C"
+                  >
+                    C
+                  </td>
+                  <td
+                    class="px-6 py-4 font-medium text-gray-900 whitespace-normal align-top"
+                    data-label="Item"
+                  >
+                    Cultural Language
+                  </td>
+                  <td class="px-6 py-4 align-top" data-label="Description">
+                    What terms or labels are used? Are they inclusive, outdated,
+                    or stigmatizing?
+                  </td>
+                </tr>
+                <tr class="bg-white dark:bg-gray-800">
+                  <td
+                    class="px-6 py-4 align-top font-bold text-gray-900"
+                    data-label="E"
+                  >
+                    E
+                  </td>
+                  <td
+                    class="px-6 py-4 font-medium text-gray-900 whitespace-normal align-top"
+                    data-label="Item"
+                  >
+                    Emerging Voices
+                  </td>
+                  <td class="px-6 py-4 align-top" data-label="Description">
+                    Are there counter-narratives or alternative portrayals,
+                    especially from self-advocates or lived experience?
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="resources">
+          <div class="max-w-7xl mx-auto">
+            <p class="text-lg text-gray-700 leading-relaxed mb-8">
+              Now, let's apply this framework to real-world examples. The
+              following table examines several well-known books and films,
+              offering a brief analysis of how they represent neurodiversity.
+              This will help illustrate how the concepts from the TRACE
+              framework appear in actual media.
+            </p>
+          </div>
+          <div
+            <div
             class="responsive-table relative overflow-x-auto max-w-7xl mx-auto rounded-lg"
           >
             <table
