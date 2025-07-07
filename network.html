@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- The title will be set by the script -->
+    <title></title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom font family for the body */
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      /* Styles for showing myth and revealing reality on click */
+      .myth-reality {
+        display: none; /* Reality is hidden by default */
+      }
+      .myth-card.active .myth-statement {
+        display: none; /* Hide the myth statement when the card is active (clicked) */
+      }
+      .myth-card.active .myth-reality {
+        display: block; /* Show the reality when the card is active (clicked) */
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <nav class="fixed top-0 w-full z-10 bg-white shadow-md rounded-b-lg">
+      <div
+        class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center"
+      >
+        <div class="text-2xl font-bold text-gray-800">
+          <a
+            href="index.html"
+            class="flex items-center text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors duration-300 rounded-md p-2"
+          >
+            <img src="assets/home.svg" alt="Home" class="w-6 h-6 mr-2" />
+            ispf
+          </a>
+        </div>
+        <ul class="hidden md:flex space-x-8">
+          <li>
+            <a
+              href="#mission"
+              class="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              data-key="nav_mission"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="#documentations"
+              class="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              data-key="nav_documentation"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="#members"
+              class="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              data-key="nav_member"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="#networking"
+              class="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              data-key="nav_networking"
+            ></a>
+          </li>
+        </ul>
+
+        <div class="flex items-center space-x-4">
+          <button
+            id="mobile-menu-button"
+            class="md:hidden p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          >
+            <svg
+              class="w-6 h-6 text-gray-700"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+          <div
+            id="languageSwitcher"
+            class="w-12 h-12 bg-white text-black flex items-center justify-center rounded-full cursor-pointer transition-colors duration-300 shadow-sm hover:shadow-md"
+          >
+            <span id="languageText" class="font-semibold"></span>
+          </div>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white shadow-lg rounded-b-lg py-2"
+      >
+        <ul class="flex flex-col items-center space-y-2 px-4">
+          <li>
+            <a
+              href="#mission"
+              class="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              data-key="nav_mission"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="#documentations"
+              class="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              data-key="nav_documentation"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="#members"
+              class="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              data-key="nav_member"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="#networking"
+              class="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              data-key="nav_networking"
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="mx-4 md:mx-auto w-full mt-24 overflow-hidden max-w-7xl">
+      <img
+        src="assets/image9.png"
+        alt="Abstract representation of neurodiversity"
+        class="w-full object-cover h-48 md:h-72 lg:h-96"
+        onerror="this.onerror=null;this.src='https://placehold.co/1200x400/cccccc/333333?text=Image+Load+Error';"
+      />
+    </div>
+
+    <section id="networking" class="py-16 md:py-24 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-4xl mx-auto mb-12">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+            data-key="networking_header"
+          ></h2>
+          <p class="text-lg text-gray-600" data-key="networking_intro"></p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Partner links -->
+          <a
+            href="https://grants.britishcouncil.org/"
+            target="_blank"
+            class="block p-20 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="flex flex-col items-center text-center">
+              <img
+                src="assets/BC-Logo.svg"
+                alt="British Council Logo"
+                class="h-20 rounded mt-5"
+              />
+            </div>
+          </a>
+          <a
+            href="https://www.aru.ac.uk/student-life/support-and-facilities/disability-support"
+            target="_blank"
+            class="block p-20 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="flex flex-col items-center text-center">
+              <img
+                src="assets/ARU-Logo.svg"
+                alt="Anglia Ruskin University Logo"
+                class="h-32 rounded"
+              />
+            </div>
+          </a>
+          <a
+            href="https://www.sampoernauniversity.ac.id/student-success"
+            target="_blank"
+            class="block p-20 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="flex flex-col items-center text-center">
+              <img
+                src="assets/SU-Logo.svg"
+                alt="Sampoerna University Logo"
+                class="h-30 rounded"
+              />
+            </div>
+          </a>
+          <a
+            href="https://about.open.ac.uk/policies-and-reports/policies-and-statements/website-accessibility-hub"
+            target="_blank"
+            class="block p-20 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="flex flex-col items-center text-center">
+              <img
+                src="assets/TOU-Logo.svg"
+                alt="The Open University Logo"
+                class="h-20 rounded mt-8"
+              />
+            </div>
+          </a>
+          <a
+            href="http://pld.uin-suka.ac.id/"
+            target="_blank"
+            class="block p-20 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="flex flex-col items-center text-center">
+              <img
+                src="assets/UIN.svg"
+                alt="UIN Sunan Kalijaga Logo"
+                class="h-32 rounded"
+              />
+            </div>
+          </a>
+          <a
+            href="https://www.instagram.com/uld.ugm/"
+            target="_blank"
+            class="block p-20 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="flex flex-col items-center text-center">
+              <img
+                src="assets/UGM.png"
+                alt="Universitas Gadjah Mada Logo"
+                class="h-36 rounded"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 md:py-24 bg-gray-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-4xl mx-auto mb-12">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+            data-key="fostering_header"
+          ></h2>
+          <p class="text-lg text-gray-600" data-key="fostering_intro"></p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="p-8 bg-white rounded-lg shadow-lg">
+            <h3
+              class="text-2xl font-bold text-gray-800 mb-4"
+              data-key="knowledge_sharing_title"
+            ></h3>
+            <ul class="space-y-4 text-gray-600">
+              <li>
+                <strong data-key="knowledge_sharing_item1_strong"></strong>
+                <span data-key="knowledge_sharing_item1_text"></span>
+              </li>
+              <li>
+                <strong data-key="knowledge_sharing_item2_strong"></strong>
+                <span data-key="knowledge_sharing_item2_text"></span>
+              </li>
+              <li>
+                <strong data-key="knowledge_sharing_item3_strong"></strong>
+                <span data-key="knowledge_sharing_item3_text"></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-8 bg-white rounded-lg shadow-lg">
+            <h3
+              class="text-2xl font-bold text-gray-800 mb-4"
+              data-key="dialogue_title"
+            ></h3>
+            <ul class="space-y-4 text-gray-600">
+              <li>
+                <strong data-key="dialogue_item1_strong"></strong>
+                <span data-key="dialogue_item1_text"></span>
+              </li>
+              <li>
+                <strong data-key="dialogue_item2_strong"></strong>
+                <span data-key="dialogue_item2_text"></span>
+              </li>
+              <li>
+                <strong data-key="dialogue_item3_strong"></strong>
+                <span data-key="dialogue_item3_text"></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-8 bg-white rounded-lg shadow-lg">
+            <h3
+              class="text-2xl font-bold text-gray-800 mb-4"
+              data-key="advocacy_title"
+            ></h3>
+            <ul class="space-y-4 text-gray-600">
+              <li>
+                <strong data-key="advocacy_item1_strong"></strong>
+                <span data-key="advocacy_item1_text"></span>
+              </li>
+              <li>
+                <strong data-key="advocacy_item2_strong"></strong>
+                <span data-key="advocacy_item2_text"></span>
+              </li>
+              <li>
+                <strong data-key="advocacy_item3_strong"></strong>
+                <span data-key="advocacy_item3_text"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="py-16 md:py-24 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-4xl mx-auto mb-12">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+            data-key="contact_header"
+          ></h2>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-10">
+          <div
+            class="w-full max-w-sm bg-gray-50 rounded-lg shadow-lg p-6 text-center"
+          >
+            <img
+              class="w-32 h-32 rounded-full mx-auto mb-4"
+              src="assets/sarinova.png"
+              alt="Profile image of the Leader"
+            />
+            <h3
+              class="text-2xl font-bold text-gray-800"
+              data-key="leader_name"
+            ></h3>
+            <p
+              class="text-indigo-600 font-semibold my-2"
+              data-key="leader_role"
+            ></p>
+            <p class="text-gray-600 text-sm" data-key="leader_specialty"></p>
+          </div>
+
+          <div
+            class="w-full max-w-sm bg-gray-50 rounded-lg shadow-lg p-6 text-center"
+          >
+            <img
+              class="w-32 h-32 rounded-full mx-auto mb-4"
+              src="assets/eka.png"
+              alt="Profile image of the Co-Leader"
+            />
+            <h3
+              class="text-2xl font-bold text-gray-800"
+              data-key="coleader_name"
+            ></h3>
+            <p
+              class="text-indigo-600 font-semibold my-2"
+              data-key="coleader_role"
+            ></p>
+            <p class="text-gray-600 text-sm" data-key="coleader_specialty"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p data-key="footer_copyright"></p>
+        <p data-key="footer_tagline"></p>
+      </div>
+    </footer>
+
+    <script src="language-switcher.js"></script>
+  </body>
+</html>
