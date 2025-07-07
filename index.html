@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title data-lang-title="title">Neurodiversity - ISPF</title>
     <link
@@ -669,76 +669,111 @@
       </div>
     </section>
 
-    <section id="best-practices" class="py-24 md:py-32 bg-gray-100">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-left">
+    <section id="best-practices" class="py-16 md:py-24 bg-gray-100">
+      <!-- Container for content -->
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Main flex container: stacks on mobile, row on desktop -->
         <div
-          class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between gap-8 md:gap-x-16 lg:gap-x-24"
+          class="max-w-6xl mx-auto flex flex-col lg:flex-row justify-between gap-8 lg:gap-16"
         >
-          <h2
-            class="text-3xl md:text-4xl text-gray-800 font-bold max-w-sm"
-            data-key="best_practices_section_title"
-          >
-            Best Practices
-          </h2>
-          <div>
+          <!-- Left Column: Section Title -->
+          <!-- The title column shrinks to fit its content and has a max-width -->
+          <div class="lg:w-1/3 flex-shrink-0">
+            <h2
+              class="text-3xl md:text-4xl text-gray-900 font-bold"
+              data-key="best_practices_section_title"
+            >
+              Best Practices for Success
+            </h2>
+          </div>
+
+          <!-- Right Column: Content (Intro, List, Video, Buttons) -->
+          <!-- This column takes up the remaining space -->
+          <div class="lg:w-2/3">
             <p
-              class="text-base md:text-lg text-gray-600 max-w-2xl leading-relaxed"
+              class="text-base md:text-lg text-gray-600 max-w-3xl leading-relaxed mb-8"
               data-lang-html="best_practices_intro_text"
             >
-              >
-              <br /><br />
+              To ensure the best results and a smooth workflow, we recommend
+              following these established guidelines. They are designed to
+              improve clarity, efficiency, and the overall quality of the final
+              outcome.
             </p>
 
+            <!-- Ordered List with proper spacing -->
+            <!-- Replaced <br> tags with margin-bottom on list items for better semantics and control -->
             <ol
-              class="list-decimal list-outside text-base md:text-lg text-gray-600 max-w-2xl leading-relaxed"
+              class="list-decimal list-inside text-base md:text-lg text-gray-600 max-w-3xl leading-relaxed space-y-4 mb-8"
+              data-key="practices_list"
             >
-              <li class="ml-6" data-key="bp_list_item_1"></li>
-              <br />
-              <li class="ml-6" data-key="bp_list_item_2"></li>
-              <br />
-              <li class="ml-6" data-key="bp_list_item_3"></li>
-              <br />
-              <li class="ml-6" data-key="bp_list_item_4"></li>
-              <br />
-              <li class="ml-6" data-key="bp_list_item_5"></li>
-              <br />
-              <li class="ml-6" data-key="bp_list_item_6"></li>
-              <br />
+              <li data-key="bp_list_item_1">
+                Always start with a clear and concise plan.
+              </li>
+              <li data-key="bp_list_item_2">
+                Maintain consistent communication with all stakeholders.
+              </li>
+              <li data-key="bp_list_item_3">
+                Document every step of the process for future reference.
+              </li>
+              <li data-key="bp_list_item_4">
+                Regularly test and iterate on your work.
+              </li>
+              <li data-key="bp_list_item_5">
+                Prioritize accessibility and user experience in all designs.
+              </li>
+              <li data-key="bp_list_item_6">
+                Seek feedback early and often to avoid major revisions later.
+              </li>
             </ol>
 
-            <div class="aspect-w-16 aspect-h-9 my-8">
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/wUJT754_Uxk"
-                frameborder="0"
-                allowfullscreen
-              ></iframe>
-            </div>
+            <!-- Responsive YouTube Video Embed -->
+            <!-- The `aspect-video` class maintains a 16:9 ratio. This is a more modern approach than the old aspect-ratio plugin. -->
+            <iframe
+              class="w-full aspect-video my-8 rounded-lg shadow-lg"
+              src="https://www.youtube.com/embed/wUJT754_Uxk"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
 
-            <div class="grid grid-cols-2 grid-rows-2 gap-2 mt-8">
+            <!-- Responsive Button Grid -->
+            <!-- Stacks to 1 column on mobile (`grid-cols-1`) -->
+            <!-- Becomes a 2-column grid on small screens and up (`sm:grid-cols-2`) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
               <a
                 href="representation.html"
                 target="_blank"
-                class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-300 hover:shadow-lg transition-all duration-300 text-md md:text-sm font-medium"
+                class="text-center bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-gray-300 hover:shadow-lg transition-all duration-300 font-medium"
                 data-key="representation_link"
-              ></a>
+              >
+                View Representation
+              </a>
               <a
                 href="https://drive.google.com/file/d/1ilSMOE8KoShUXaUb0NhQdJnO6HyCWsPG/view"
                 target="_blank"
-                class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-300 hover:shadow-lg transition-all duration-300 text-md md:text-sm font-medium"
+                class="text-center bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-gray-300 hover:shadow-lg transition-all duration-300 font-medium"
                 data-key="module_link"
-              ></a>
+              >
+                Download Module
+              </a>
               <a
                 href="aboutus.html"
-                class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-300 hover:shadow-lg transition-all duration-300 text-md md:text-sm font-medium"
+                target="_blank"
+                class="text-center bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-gray-300 hover:shadow-lg transition-all duration-300 font-medium"
                 data-key="nav_about_us"
-              ></a>
+              >
+                About Us
+              </a>
               <a
                 href="network.html"
-                class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-300 hover:shadow-lg transition-all duration-300 text-md md:text-sm font-medium"
+                target="_blank"
+                class="text-center bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-gray-300 hover:shadow-lg transition-all duration-300 font-medium"
                 data-key="nav_network"
-              ></a>
+              >
+                Our Network
+              </a>
             </div>
           </div>
         </div>
