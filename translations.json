@@ -242,7 +242,8 @@
     "coleader_specialty": "Language Learning, Neurodiversity Specialist.",
     "footer_copyright": "©2025 ISPF. All rights reserved.",
     "footer_tagline": "Building a more inclusive future, together.",
-    "nav_network": "NIE-Network"
+    "nav_network": "NIE-Network",
+    "nav_policy": "Policy Brief"
   },
 
   "id": {
@@ -253,6 +254,7 @@
     "nav_takeaways": "Poin Penting",
     "nav_about_us": "Tentang Kami",
     "nav_network": "NIE-Network",
+    "nav_policy" : "Ikhtisar Kebijakan",
     "hero_headline": "Belajar Menghargai Pikiran Tanpa Memaksanya untuk Menyesuaikan Diri",
     "hero_learn_more": "Pelajari Lebih Lanjut",
     "hero_collaboration_intro": "Bekerja sama dengan",
